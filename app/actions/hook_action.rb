@@ -19,6 +19,7 @@ class HookAction < Cramp::Action
 
   def destroy_redis
     @redis.pubsub.unsubscribe('webhook')
+    @redis.close_connection
   end
 
   private
