@@ -11,6 +11,7 @@ class PostAction < Cramp::Action
 
     redis = EM::Hiredis.connect(Settings.redis)
     redis.publish 'webhook', response
+    redis.close_connection
 
     finish
   end
