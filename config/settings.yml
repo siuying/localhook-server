@@ -1,8 +1,8 @@
 development:
-  redis: <%= ENV['REDISTOGO_URL'] %>
+  redis: <%= ENV['REDIS_URL'] %>
 
 test:
-  redis: <%= ENV['REDISTOGO_URL'] %>
+  redis: <%= ENV['REDIS_URL'] %>
 
 production:
-  redis: <%= ENV['REDISTOGO_URL'] %>
+  redis: <%= ENV['REDIS_URL'] %>
