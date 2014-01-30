@@ -73,7 +73,7 @@ localhook https://localhook.mydomain.com http://localhost:3000
 ``
 
 Instead of giving third party url "http://localhost:3000/webhook", you give them
-``https://localhook.mydomain.com/endpoint1/webhook```.
+``https://localhook.mydomain.com/endpoint1/webhook``.
 
 Any POST request sent to ``https://localhook.mydomain.com/endpoint1/webhook`` will be
 forwarded to ``http://localhost:3000/webhook``.
