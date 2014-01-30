@@ -10,8 +10,10 @@ class PostAction < Cramp::Action
     response = encode_json(data)
 
     redis = EM::Hiredis.connect(Settings.redis)
-    redis.publish 'webhook', response
-    redis.close_connection
+    redis.publish('webhook', response).callback do
+      # only close connection after complete the publish
+      redis.close_connection
+    end
 
     finish
   end

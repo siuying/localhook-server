@@ -9,7 +9,6 @@ class HookAction < Cramp::Action
   on_finish :unsubscribe_webhook
 
   def subscribe_webhook
-    puts "connect redis and subscribe to webhook!"
     @redis = EM::Hiredis.connect(Settings.redis)
     @pubsub = @redis.pubsub
     @pubsub.subscribe('webhook')
@@ -19,7 +18,6 @@ class HookAction < Cramp::Action
   end
 
   def unsubscribe_webhook
-    puts "disconnect redis and unsubscribe to webhook!"
     @redis.pubsub.unsubscribe('webhook')
     @redis.close_connection
   end
