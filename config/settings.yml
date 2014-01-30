@@ -1,8 +1,11 @@
 development:
   redis: <%= ENV['REDIS_URL'] %>
+  tokens: <%= ENV['LOCALHOOK_TOKENS'] ? ENV['LOCALHOOK_TOKENS'].split(",") : [] %>
 
 test:
   redis: <%= ENV['REDIS_URL'] %>
+  tokens: <%= ENV['LOCALHOOK_TOKENS'] ? ENV['LOCALHOOK_TOKENS'].split(",") : [] %>
 
 production:
   redis: <%= ENV['REDIS_URL'] %>
+  tokens: <%= ENV['LOCALHOOK_TOKENS'] ? ENV['LOCALHOOK_TOKENS'].split(",") : [] %>

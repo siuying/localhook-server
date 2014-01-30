@@ -1,6 +1,6 @@
 class HomeAction < Cramp::Action
   def start
-    render "Hello World!"
+    render "Localhook/1.0.0"
     finish
   end
 end
