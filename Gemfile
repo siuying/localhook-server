@@ -20,11 +20,12 @@ gem 'yajl-ruby', :require => 'yajl'
 # Config file
 gem 'settingslogic'
 
+# Process management
+gem 'foreman'
+
 group :development do
   # Debugging
   gem 'pry'
-
-  gem 'foreman'
 end
 
 group :test do
