@@ -23,6 +23,8 @@ gem 'settingslogic'
 # Process management
 gem 'foreman'
 
+gem 'rake'
+
 group :development do
   # Debugging
   gem 'pry'

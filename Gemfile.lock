@@ -37,6 +37,7 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
+    rake (10.1.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -67,6 +68,7 @@ DEPENDENCIES
   foreman
   http_router
   pry
+  rake
   rspec
   settingslogic
   thin
