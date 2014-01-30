@@ -12,8 +12,8 @@ Localhook lets you host a public endpoint for other services and tunnels request
 
 Localhook contains two components: server and client.
 
-- (Server)[https://github.com/siuying/localhook-server] Hosted on Internet (e.g. Heroku).
-- (Client)[https://github.com/siuying/localhook] Run behind firewall. They will connect to localhook server, forward any webhooks sent to localhook server to other servers behind firewall. 
+- [Server](https://github.com/siuying/localhook-server) Hosted on Internet (e.g. Heroku).
+- [Client](https://github.com/siuying/localhook) Run behind firewall. They will connect to localhook server, forward any webhooks sent to localhook server to other servers behind firewall. 
 
 ## Dependency
 
