@@ -77,3 +77,7 @@ Instead of giving third party url "http://localhost:3000/webhook", you give them
 
 Any POST request sent to ``https://localhook.mydomain.com/endpoint1/webhook`` will be
 forwarded to ``http://localhost:3000/webhook``.
+
+## License
+
+MIT License.
