@@ -13,7 +13,7 @@ class HookAction < Cramp::Action
     @pubsub = @redis.pubsub
     @pubsub.subscribe('webhook')
     @pubsub.on(:message) do |channel, message|
-      render(encode_json(message))
+      render(message)
     end
   end
 
