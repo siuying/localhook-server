@@ -19,7 +19,7 @@ Localhook contains two components: server and client.
 
 Localhook Server requires Redis.
 
-## Installation
+## Development
 
 Checkout the localhook-server project, and run bundler:
 ```
@@ -37,16 +37,24 @@ LOCALHOOK_ENDPOINTS=endpoint1:token1,endpoint2:token2
 * **REDIS_URL**: URL to a redis server.
 * **LOCALHOOK_ENDPOINTS**: Comma separaten string, each in format "endpoint-name:token". details are described to Usage section below.
 
-## Usage
-
-### Running the server
-
 To run the localhook server locally:
 ``
 foreman start
 ``
 
-You certainly want to host the server on Internet using service like Heroku.
+## Heroku
+
+You can deploy Localhook Server on Heroku using the following commands (you'll need to have installed the Heroku toolbelt already):
+
+```
+cd localhook-sercer
+heroku create
+heroku config:set LOCALHOOK_ENDPOINTS={YOUR-ENDPOINT-CONFIG}
+heroku addons:add redistogo
+git push heroku master
+```
+
+## Usage
 
 ### Create a localhook endpoint
 
